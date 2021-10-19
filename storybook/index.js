@@ -9,12 +9,14 @@ import {
 import { withKnobs } from '@storybook/addon-knobs';
 
 import './rn-addons';
+import { loadStories } from './storyLoader';
 
 // enables knobs for all stories
 addDecorator(withKnobs);
 
 // import stories
 configure(() => {
+  loadStories();
   require('./stories');
 }, module);
 
